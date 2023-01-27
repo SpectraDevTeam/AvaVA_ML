@@ -20,7 +20,7 @@ def takeCommand():
          
         print("Now listening")
         r.adjust_for_ambient_noise(source)
-        r.pause_threshold = 2
+        r.pause_threshold = 1
         audio = r.listen(source)  
     try:
         query = r.recognize_google(audio, language ='en-US')
