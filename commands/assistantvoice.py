@@ -7,7 +7,6 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', idvoice)
 newVoiceRate = 100
 engine.setProperty('rate', newVoiceRate)
-vort = ""
 
 def speak(audio):
     engine.say(audio)
@@ -21,25 +20,28 @@ def takeCommand():
          
         print("Now listening")
         r.adjust_for_ambient_noise(source)
-        r.pause_threshold = 1
+        r.pause_threshold = 2
         audio = r.listen(source)  
     try:
-        print("Deciphering")   
         query = r.recognize_google(audio, language ='en-US')
-        print("You Said: " + query)
-  
-    except Exception as e:
-        print(e)
-        print("Did not hear anything") 
-        return "None"
-    
+    except:
+        query = ""
     
     
     return query
 
-def voiceortext(finding):
-    if vort == "voice":
-        thing = takeCommand()
-    elif vort == "text":
-        thing = input(f"{finding}: ")
-    return thing
+def listen_for_wakeup(continuereading):
+    r = sr.Recognizer()
+    while continuereading == True:
+        print("Listening For Wakeup")
+        with sr.Microphone() as source:
+            audio = r.listen(source)
+            try:
+                wakeup = r.recognize_google(audio)
+                wakeup = wakeup.lower()
+                if "sam" in wakeup:
+                    return True
+                else:
+                    return False
+            except:
+                continue

@@ -8,16 +8,9 @@ def command_matches_input(input):
     else:
         return False
 
-def execute(input):
-    result = 0
-    times = 0
-    nums = [0, 0]
-    while(times != 2):
-        for match in re.finditer(r'\d+', input):
-            
-            nums[times] += int(match.group(0))
-            print(nums[times])
-            times += 1
+def execute(numbers):
+    result = numbers[0]
+    for num in numbers[1:]:
+        result /= int(num)
         
-    result = nums[0] / nums[1]
     assistantvoice.speak(f"The Answer is {result}")
