@@ -4,7 +4,7 @@ import difflib
 from textblob import TextBlob
 import re
 
-commandslist = ["end", "flip", "joke", "roll", "timer", "systime", "add", "subtract", "multiply", "divide", "search", "image", "app"]
+commandslist = ["end", "flip", "joke", "roll", "timer", "systime", "add", "subtract", "multiply", "divide", "search", "image", "app", "fuck"]
 fullinputcommands = ["search", "image"]
 numinputcommands = ["roll", "add", "subtract", "multiply", "divide"]
 command = ''
@@ -69,21 +69,21 @@ def listen_for_command(vort):
                 else:
                     assistantvoice.speak("Okay, go ahead and try again")
                     break
-        else:
-            for syn in synonyms:
-                for comm in commandslist:
-                    if comm in synonyms:
-                        assistantvoice.speak(f"Did you mean {syn}?")
-                        answer = voiceortext("Yes or No? ", vort)
-                        answer = answer.lower()
-                        if answer == "yes":
-                            try:
-                                assistantvoice.speak("Okay")
-                                module = importlib.import_module(f'commands.{syn}')
-                                module.execute(syn)
-                            except FileNotFoundError:
-                                assistantvoice.speak("ERROR. COMMAND LIST HAS NO FILE FOR THIS NAME.")
-                            break
-                        else:
-                            assistantvoice.speak("Okay, go ahead and try again")
-                            break
+            else:
+                for syn in synonyms:
+                    for comm in commandslist:
+                        if comm in syn:
+                            assistantvoice.speak(f"Did you mean {syn}?")
+                            answer = voiceortext("Yes or No? ", vort)
+                            answer = answer.lower()
+                            if answer == "yes":
+                                try:
+                                    assistantvoice.speak("Okay")
+                                    module = importlib.import_module(f'commands.{syn}')
+                                    module.execute(syn)
+                                except FileNotFoundError:
+                                    assistantvoice.speak("ERROR. COMMAND LIST HAS NO FILE FOR THIS NAME.")
+                                break
+                            else:
+                                assistantvoice.speak("Okay, go ahead and try again")
+                                break

@@ -28,4 +28,3 @@ while True:
     elif vort == "text":
         assistantvoice.speak(random.choice(wakeupreply))
         listen.listen_for_command(vort)
-        
