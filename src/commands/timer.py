@@ -60,7 +60,6 @@ def execute(string, input):
 
         
 
-        playsound("/Users/spectrathefox/Desktop/Repos/SamanthaVA_ML/audiofiles/timerend2.mp3")
         assistantvoice.speak("Timer is Done")
         stop = True
     if stop == True:

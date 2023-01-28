@@ -5,7 +5,7 @@
 __pycache__
 commands/__pycache__
 commands/.DS_Store
-
+.pytest_cache
 
 #Files
 test.py
