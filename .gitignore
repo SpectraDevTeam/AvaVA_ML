@@ -8,7 +8,6 @@ commands/.DS_Store
 .pytest_cache
 
 #Files
-test.py
 commands/fuck.py
 devmain.py
 devlisten.py

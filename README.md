@@ -35,3 +35,5 @@ You can start the command proccess by using her wakeup word! "Sam" will wake her
 * search - searches google for a prompt
 * image - searches google images for a prompt
 * app - opens an app on your computer
+
+![Code Size](https://img.shields.io/github/languages/code-size/SpectraDevTeam/SamanthaVA_ML) ![]()
