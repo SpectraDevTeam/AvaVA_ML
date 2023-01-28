@@ -1,7 +1,0 @@
-[default]
-region = us-west-2
-output = json
-
-[profile spectra]
-region = us-west-2
-output = json
