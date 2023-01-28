@@ -1,0 +1,15 @@
+#Folders
+.DS_Store
+.vscode
+.awsconfig
+__pycache__
+commands/__pycache__
+commands/.DS_Store
+
+
+#Files
+test.py
+commands/fuck.py
+devmain.py
+devlisten.py
+commands/devassistantvoice.py

@@ -4,7 +4,7 @@ import difflib
 from textblob import TextBlob
 import re
 
-commandslist = ["end", "flip", "joke", "roll", "timer", "systime", "add", "subtract", "multiply", "divide", "search", "image", "app", "fuck"]
+commandslist = ["end", "flip", "joke", "roll", "timer", "systime", "add", "subtract", "multiply", "divide", "search", "image", "app"]
 fullinputcommands = ["search", "image"]
 numinputcommands = ["roll", "add", "subtract", "multiply", "divide"]
 command = ''

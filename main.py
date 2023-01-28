@@ -3,15 +3,7 @@ import random
 import listen
 
 wakeupreply = ("Hello, What would you like me to do?", "Yes?", "How can I help?", "Welcome back, what can I do for you?", "Ready to get started, what can I do for you?", "I'm here to help, what do you need?", "What's on your mind?", "How may I assist you?")
-vort = ""
-
-
-#Do you want to type or talk
-if vort != 'text' and vort != 'voice':
-    vort = input("Would You like to start in text or voice mode? ")
-    vort = vort.lower()
-
-print(f"You Chose {vort} Mode")
+vort = "voice"
 
 #Always Runs
 while True:

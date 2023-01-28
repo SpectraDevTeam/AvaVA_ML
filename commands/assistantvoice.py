@@ -13,11 +13,7 @@ session = boto3.Session()
 polly = session.client("polly")
 
 current_os = platform.system()
-print(f"Launching on {current_os}")
-if current_os == "Windows":
-    idvoice = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
-if current_os == "Darwin":
-    idvoice = "com.apple.voice.premium.en-UK.Serena"
+idvoice = open("voice.txt", "r")
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -62,18 +58,3 @@ def listen_for_wakeup(continuereading):
                     return False
             except:
                 continue
-
-def speakPolly(input):
-    response = polly.synthesize_speech(Text=input, OutputFormat="mp3", VoiceId="Amy")
-    with closing(response["AudioStream"]) as stream:
-           output = os.path.join(gettempdir(), "speech.mp3")
-
-           try:
-            # Open a file for writing the output as a binary stream
-                with open(output, "wb") as file:
-                   file.write(stream.read())
-           except IOError as error:
-              # Could not write to file, exit gracefully
-              print(error)
-
-    playsound(output)
