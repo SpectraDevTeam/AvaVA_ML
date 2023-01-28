@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         conda install pip
-        conda install -c auto pyttsx
+        conda install -c auto pyttsx3
         pip install google
         pip install playsound
         pip install textblob
