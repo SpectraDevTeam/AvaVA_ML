@@ -10,7 +10,7 @@ def command_matches_input(input):
         return False
 
 def execute(input):
-    with open('commands/jokes.txt', 'r') as jokefile:
+    with open('src/commands/jokes.txt', 'r') as jokefile:
         lines = jokefile.readlines()
         for line in lines:
             jokes.append(line)

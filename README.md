@@ -1,5 +1,7 @@
 # Samantha Voice Assistant
 
+**BROKEN, STILL IN PROGRESS**
+
 All of the Samantha code for her Voice Assistant! A fully functional (Kind of, Still a WIP) voice assistant with many commands! This Version has Machine Learning in progress. I have made all of this. This is all my hard work and I care about it a lot. Please use with care. Any modifications to code on main branches should be approved by me. 
 
 

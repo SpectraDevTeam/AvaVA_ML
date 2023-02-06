@@ -13,7 +13,7 @@ session = boto3.Session()
 polly = session.client("polly")
 
 current_os = platform.system()
-idvoice = open("voice.txt", "r")
+idvoice = open("/Users/spectrathefox/Desktop/Repos/SamanthaVA_ML/src/voice.txt", "r")
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -21,7 +21,7 @@ engine.setProperty('voice', idvoice)
 newVoiceRate = 100
 engine.setProperty('rate', newVoiceRate)
 
-def speak(audio):
+def speak2(audio):
     engine.say(audio)
     engine.runAndWait()
 
@@ -58,3 +58,19 @@ def listen_for_wakeup(continuereading):
                     return False
             except:
                 continue
+
+def speak(input):
+    response = polly.synthesize_speech(Text=input, OutputFormat="mp3", VoiceId="Amy")
+    with closing(response["AudioStream"]) as stream:
+           output = os.path.join(gettempdir(), "speech.mp3")
+
+           try:
+            # Open a file for writing the output as a binary stream
+                with open(output, "wb") as file:
+                   file.write(stream.read())
+           except IOError as error:
+              # Could not write to file, exit gracefully
+              print(error)
+            
+    
+    playsound(output)
