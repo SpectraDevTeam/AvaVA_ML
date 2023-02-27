@@ -1,9 +1,12 @@
 # Samantha Voice Assistant
 
-**BROKEN, STILL IN PROGRESS**
+**BROKEN, STILL IN PROGRESS, PLEASE BE PATIENT WITH ME AS THIS IS PLANNED TO TAKE A LONG TIME**
 
 All of the Samantha code for her Voice Assistant! A fully functional (Kind of, Still a WIP) voice assistant with many commands! This Version has Machine Learning in progress. I have made all of this. This is all my hard work and I care about it a lot. Please use with care. Any modifications to code on main branches should be approved by me. 
 
+## Machine Learning Portion
+***
+The part of the machine learning in this branch takes any input you give it to learn and develop its own more human output. I also plan to have it learn from your input to come up with its own output. This is still in the works and is not yet implemented. Much of this branch is broken and will not work. I am working on it and will update it when I can. Please be patient with me as this will take quite a while to complete. This is my first time working with Machine Learning and I am still learning. I will update this README when I have more information on the progress of the machine learning portion of this project.
 
 ## Installation
 ***
@@ -15,7 +18,7 @@ Before running her you will want to use ```python3 checkvoices.py``` to check wh
 ***
 Before running her you will want to use ```python3 checkvoices.py``` to check what voices are on your system and select one for use. As this is still in the testing phase the Final voice is not yet availible. you will want to select one of the voices from the ones generated and it will edit voice.txt to run the voice you select.
 <br /><br />
-To Run the voice assistant run ```python3 main.py``` or use one of the executable files (**WIP, NOT YET AVAILABLE**) made for your operating system.
+To Run the voice assistant run ```python3 main.py``` or use one of the executable files (**WIP, EXECUTABLES NOT YET AVAILABLE**) made for your operating system.
 
 ## Using the Program
 ***
