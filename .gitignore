@@ -2,7 +2,7 @@
 .DS_Store
 .vscode
 .awsconfig
-__pycache__
+src/.___pycache__
 src/commands/__pycache__
 src/commands/.DS_Store
 src/.pytest_cache
@@ -14,4 +14,9 @@ devsrc
 .DS_Store
 .vscode
 .awsconfig
+src/._.DS_Store
+src/._commands
+src/commands/__pycache__
+src/commands/.___pycache__
+src/commands/._audiofiles
 commandinputs.txt
