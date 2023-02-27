@@ -1,4 +1,5 @@
-# Samantha Voice Assistant
+## Ava Voice Assistant
+***
 
 **BROKEN, STILL IN PROGRESS, PLEASE BE PATIENT WITH ME AS THIS IS PLANNED TO TAKE A LONG TIME**
 

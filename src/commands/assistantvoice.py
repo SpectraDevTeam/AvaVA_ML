@@ -52,7 +52,7 @@ def listen_for_wakeup(continuereading):
             try:
                 wakeup = r.recognize_google(audio)
                 wakeup = wakeup.lower()
-                if "sam" in wakeup:
+                if "ava" in wakeup:
                     return True
                 else:
                     return False
